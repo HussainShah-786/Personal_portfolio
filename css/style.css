@@ -381,11 +381,16 @@ color: var(--text-black-700);
     left: -20px;
     top: -40px;
 }
+ .home-img img
+ {
+    border: 10px solid var(--skin-color);
+    border-style:double;
+ }
 .home .home-img img
 {
     margin:auto ;
     height: 400px;
-    border-radius: 5px;
+    border-radius: 100%;
 }
 /* home section ends here */
 /* about section starts from here */
