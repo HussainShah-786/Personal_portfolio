@@ -875,5 +875,9 @@ color: var(--text-black-900);
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .contact .contact-form .form-item .btn
+    {
+        margin-bottom: 30px;
+    }
  }
  /* media query ends here */
