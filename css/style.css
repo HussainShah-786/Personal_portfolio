@@ -363,8 +363,8 @@ color: var(--text-black-700);
 {
     content: "";
     position: absolute;
-    height: 70%;
-    width: 50%;
+    height: 40%;
+    width: 30%;
     border-bottom: 10px dashed var(--skin-color);
     border-right: 10px solid var(--skin-color);
     right: 20px;
@@ -374,8 +374,8 @@ color: var(--text-black-700);
 {
     content: "";
     position: absolute;
-    height: 70%;
-    width: 50%;
+    height: 40%;
+    width: 30%;
     border-top: 10px dashed var(--skin-color);
     border-left: 10px solid var(--skin-color);
     left: 20px;
@@ -389,7 +389,7 @@ color: var(--text-black-700);
 .home .home-img img
 {
     margin:auto ;
-    height: 300px;
+    height: 289px;
     border-radius: 100%;
 }
 /* home section ends here */
