@@ -96,40 +96,41 @@ const navTogglerBtn = document.querySelector(".nav-toggler"),
                 allSection[i].classList.toggle("open");
             }
         }
-// JS Code for Email js //
+// JS Code for Email js starts from here //
 const contactForm = document.querySelector("#contact-form");
 const submitBtn = document.querySelector("#submit-btn");
 const nameInput = document.querySelector("#user_name");
 const emailInput = document.querySelector("#user_email");
 const subjectInput = document.querySelector("#subject");
 const messageInput = document.querySelector("#message");
+
 const publicKey = "mIVEqC5zrU36d5jyn";
 const serviceID = "service_yunrv0n";
 const templateID = "template_3gfxoe8";
+
 // Initialize emailjs
 emailjs.init(publicKey);
+
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
   submitBtn.innerText = "Just A Moment...";
   submitBtn.disabled = true;
+
   const inputFields = {
     user_name: nameInput.value,
     user_email: emailInput.value,
     subject: subjectInput.value,
     message: messageInput.value,
   };
+
   // Validate form fields
-  if (
-    !nameInput.value ||
-    !emailInput.value ||
-    !subjectInput.value ||
-    !messageInput.value
-  ) {
+  if (!nameInput.value || !emailInput.value || !subjectInput.value || !messageInput.value) {
     alert("Please fill out all fields.");
-    submitBtn.innerText = "Submit";
+    submitBtn.innerText = "Send Message";
     submitBtn.disabled = false;
     return;
   }
+
   emailjs.send(serviceID, templateID, inputFields).then(
     () => {
       submitBtn.innerText = "Message Sent Successfully";
@@ -139,9 +140,9 @@ contactForm.addEventListener("submit", (e) => {
     (error) => {
       console.error("Error sending email:", error);
       alert("Something went wrong. Please try again later.");
-      submitBtn.innerText = "Submit";
+      submitBtn.innerText = "Send Message";
       submitBtn.disabled = false;
     }
   );
 });
-
+// JS Code for Email js ends here //
